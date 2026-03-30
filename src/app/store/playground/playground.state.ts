@@ -4,8 +4,12 @@ export interface PlaygroundState {
   js: string;
 }
 
-export const initialPlaygroundState: PlaygroundState = {
+export const defaultPlaygroundState: PlaygroundState = {
   html: '',
   css: '',
   js: '',
+};
+
+export const initialPlaygroundState: PlaygroundState = {
+  ...defaultPlaygroundState,
 };
