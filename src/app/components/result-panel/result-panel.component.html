@@ -1,21 +1,11 @@
-<section class="flex h-full min-h-0 flex-col rounded-2xl border border-slate-200 bg-white">
-  <header
-    class="flex items-center justify-between border-b border-slate-200 px-4 py-3"
-  >
-    <div>
-      <p class="text-xs font-semibold uppercase tracking-[0.2em] text-violet-600">
-        Preview
-      </p>
-      <h2 class="text-sm font-semibold text-slate-900">Result</h2>
-    </div>
-    <span
-      class="rounded-full border border-violet-200 bg-violet-50 px-2 py-1 text-[11px] font-medium text-violet-700"
-    >
-      Output
-    </span>
-  </header>
-
-  <div class="flex flex-1 min-h-0 flex-col gap-3 p-4">
+<app-panel
+  eyebrow="Preview"
+  title="Result"
+  badge="Output"
+  accentClass="text-violet-600"
+  badgeClass="border-violet-200 bg-violet-50 text-violet-700"
+>
+  <div class="flex flex-1 min-h-0 flex-col gap-3">
     <div
       class="rounded-xl border px-3 py-2 text-xs font-medium"
       [class.border-slate-200]="previewStatus().tone === 'idle'"
@@ -40,4 +30,4 @@
       ></iframe>
     </div>
   </div>
-</section>
+</app-panel>

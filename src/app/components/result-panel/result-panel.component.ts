@@ -7,6 +7,7 @@ import {
   viewChild,
 } from '@angular/core';
 import { Store } from '@ngrx/store';
+import { AppPanelComponent } from '../app-panel/app-panel.component';
 import {
   selectPreviewDocument,
   selectPreviewStatus,
@@ -15,6 +16,7 @@ import {
 @Component({
   selector: 'app-result-panel',
   standalone: true,
+  imports: [AppPanelComponent],
   templateUrl: './result-panel.component.html',
   styleUrl: './result-panel.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,

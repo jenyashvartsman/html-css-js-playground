@@ -1,0 +1,17 @@
+<label class="sr-only" [for]="inputId()">{{ ariaLabel() }}</label>
+<textarea
+  [id]="inputId()"
+  class="min-h-[240px] w-full flex-1 resize-none rounded-xl border border-slate-200 bg-slate-50/80 px-4 py-3 text-sm leading-6 text-slate-800 outline-none transition"
+  [class]="tintClass()"
+  [class.border-rose-300]="!!error()"
+  [class.bg-rose-50]="!!error()"
+  [placeholder]="placeholder()"
+  spellcheck="false"
+  [value]="value()"
+  (input)="onInput($event)"
+></textarea>
+@if (error(); as inputError) {
+  <p class="mt-2 px-1 text-xs font-medium leading-5 text-rose-600">
+    {{ inputError }}
+  </p>
+}
