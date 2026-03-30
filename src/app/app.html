@@ -1,1 +1,14 @@
-<div>app</div>
+<main class="min-h-screen bg-slate-100 text-slate-950">
+  <div class="mx-auto flex min-h-screen max-w-7xl flex-col px-4 py-4 sm:px-6 lg:px-8">
+    <app-header />
+
+    <section class="grid flex-1 gap-4 lg:grid-cols-3">
+      <app-html-panel />
+      <app-css-panel />
+      <app-js-panel />
+      <div class="lg:col-span-3">
+        <app-result-panel />
+      </div>
+    </section>
+  </div>
+</main>
