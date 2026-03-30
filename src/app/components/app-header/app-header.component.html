@@ -1,11 +1,21 @@
 <header class="mb-4 rounded-3xl border border-slate-200 bg-white px-5 py-4 shadow-sm">
   <div class="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-    <p class="text-xs font-semibold uppercase tracking-[0.24em] text-slate-500">
-      HTML | CSS | JS Playground
-    </p>
+    <div>
+      <p class="text-xs font-semibold uppercase tracking-[0.24em] text-slate-500">
+        HTML | CSS | JS Playground
+      </p>
 
-    <p class="max-w-md text-sm leading-6 text-slate-600">
-      Build and preview snippets in one workspace
-    </p>
+      <p class="mt-1 max-w-md text-sm leading-6 text-slate-600">
+        Build and preview snippets in one workspace
+      </p>
+    </div>
+
+    <button
+      type="button"
+      class="inline-flex items-center justify-center rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-medium text-slate-700 transition hover:border-slate-300 hover:bg-slate-100"
+      (click)="resetPlayground()"
+    >
+      Reset
+    </button>
   </div>
 </header>

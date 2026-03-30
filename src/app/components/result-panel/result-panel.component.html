@@ -15,13 +15,29 @@
     </span>
   </header>
 
-  <div class="flex-1 p-4">
+  <div class="flex flex-1 min-h-0 flex-col gap-3 p-4">
     <div
-      class="flex h-full min-h-[240px] items-center justify-center rounded-xl border border-dashed border-slate-200 bg-slate-50/80 p-4"
+      class="rounded-xl border px-3 py-2 text-xs font-medium"
+      [class.border-slate-200]="previewStatus().tone === 'idle'"
+      [class.bg-slate-50]="previewStatus().tone === 'idle'"
+      [class.text-slate-600]="previewStatus().tone === 'idle'"
+      [class.border-emerald-200]="previewStatus().tone === 'ready'"
+      [class.bg-emerald-50]="previewStatus().tone === 'ready'"
+      [class.text-emerald-700]="previewStatus().tone === 'ready'"
+      [class.border-amber-200]="previewStatus().tone === 'warning'"
+      [class.bg-amber-50]="previewStatus().tone === 'warning'"
+      [class.text-amber-700]="previewStatus().tone === 'warning'"
     >
-      <p class="text-sm leading-6 text-slate-500">
-        Result viewer placeholder
-      </p>
+      {{ previewStatus().message }}
+    </div>
+
+    <div class="flex flex-1 min-h-[280px] overflow-hidden rounded-xl border border-slate-200 bg-slate-50/80">
+      <iframe
+        #previewFrame
+        class="h-full w-full bg-white"
+        sandbox="allow-modals allow-same-origin allow-scripts"
+        title="Playground result preview"
+      ></iframe>
     </div>
   </div>
 </section>
